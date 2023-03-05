@@ -2,7 +2,7 @@
 Robotics project which has a face
 Inspired by every robot with a face on it. (Mostly by Wall-E)  :robot:
 
-## Contributers
+## Contributors
 - [Alparslan Kilinc](https://github.com/AlparslanKilinc)
 - [Luke Strazz](https://github.com/LukeStrazz)
 
@@ -14,7 +14,7 @@ https://user-images.githubusercontent.com/100721307/222938089-ba4f5214-70dd-46bc
 ### Sleepy Pixel
 https://user-images.githubusercontent.com/100721307/222938122-befb3778-9116-40db-83b4-6db895ff9079.mov
 
-## Decryption
+## Description
 To make this project come alive You will need the following
 - Arduino Board
 - OLED Screen
