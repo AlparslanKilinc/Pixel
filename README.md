@@ -5,11 +5,10 @@ Inspired by every robot with a face on it. (Mostly by Wall-E)  :robot:
 
 ### Demo
 #### Pixel Winking
-<video src='./winking_pixel.mov' width=180/>
+![Winking](https://github.com/AlparslanKilinc/Pixel-Buddy/blob/main/winking_pixel.mov)
 
 #### Sleepy Pixel
-<video src='./sleeping_pixel.mov' width=180/>
-
+![Sleeping](https://github.com/AlparslanKilinc/Pixel-Buddy/blob/main/sleeping_pixel.mov)
 
 # Decryption
 To make this project come alive You will need the following
