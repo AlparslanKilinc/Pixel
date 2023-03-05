@@ -3,11 +3,11 @@ Robotics project which has a face
 Inspired by every robot with a face on it. (Mostly by Wall-E)  :robot:
 
 ## Contributers
-- https://github.com/LukeStrazz
-- https://github.com/AlparslanKilinc
-
+- [Alparslan Kilinc](https://github.com/AlparslanKilinc)
+- [Luke Strazz](https://github.com/LukeStrazz)
 
 ### Demo
+
 #### Pixel Winking
 https://user-images.githubusercontent.com/100721307/222938089-ba4f5214-70dd-46bc-bc89-a588d20b873d.mov
 
@@ -30,4 +30,3 @@ Now you will be able to see the cute faces.
 
 We are planning on adding a speaker  and a battery and combine everything to make an portable pixel buddy.
 Soon we will add our demos and once assembled in a cute case our Pixel Buddy will come alive.
-
