@@ -2,8 +2,8 @@
 Robotics project which has a face
 Inspired by every robot with a face on it. (Mostly by Wall-E)  :robot:
 ##Contributers
--https://github.com/LukeStrazz
--https://github.com/AlparslanKilinc
+- https://github.com/LukeStrazz
+- https://github.com/AlparslanKilinc
 
 
 ### Demo
