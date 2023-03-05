@@ -5,15 +5,11 @@ Inspired by every robot with a face on it. (Mostly by Wall-E)  :robot:
 
 ### Demo
 #### Pixel Winking
-<video width="320" height="240" controls>
-  <source src="winking_pixel.mov" type="video/mp4">
-</video>
+
+![](winking_pixel.mov)
 
 #### Sleepy Pixel
-<video width="320" height="240" controls>
-  <source src="sleeping_pixel.mov" type="video/mp4">
-</video>
-
+![](sleeping_pixel.mov)
 
 # Decryption
 To make this project come alive You will need the following
