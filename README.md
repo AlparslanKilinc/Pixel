@@ -1,6 +1,6 @@
 # Pixel Buddy
 Introducing the World's most interactive and stimulating device, the Pixel Buddy!
-A robotics project that implimnets various faces,
+A robotics project that implements various faces,
 Inspired by every robot with a face on it. (Mostly by Wall-E)  :robot:
 
 ## Contributors
