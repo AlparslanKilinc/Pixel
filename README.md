@@ -22,7 +22,7 @@ To make this project come alive You will need the following:
 - Jumper Cables
 
 ## Instructions
-- [How to Make Pixel Buddy](https://github.com/AlparslanKilinc/Pixel-Buddy/files/10894864/How.to.Make.Pixel.Buddy.pdf)
+- [Step by Step Guide](https://github.com/AlparslanKilinc/Pixel-Buddy/files/10894864/How.to.Make.Pixel.Buddy.pdf)
 
 Using Arduino IDE, upload the code from pixel_buddy.ino into your Arduino Board.
 Connect OLED Screen to your Arduino with the Jumper Cables, to the proper terminals.
