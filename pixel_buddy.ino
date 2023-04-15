@@ -1,8 +1,16 @@
+#include <DFRobotDFPlayerMini.h>
+#include "Arduino.h"
+#include "SoftwareSerial.h"
 #include <Wire.h>
 #include <Adafruit_SSD1306.h>
 #define OLED_ADDRESS 0x3C
 
 Adafruit_SSD1306 display(128, 64, &Wire, OLED_ADDRESS);
+// Create the Player
+int serial1 = 10;
+int serial2 = 11;
+SoftwareSerial mySoftwareSerial(serial1,serial2);
+DFRobotDFPlayerMini player;
 
 /// Helper Shapes
 // Mouth
@@ -92,6 +100,7 @@ int right_carrot_eye(){
 }
 /// Faces
 int heart_face(){
+  player.playMp3Folder(3);
   display.clearDisplay();
   left_heart();
   right_heart();
@@ -113,7 +122,7 @@ int blink_face(){
   blink();
   small_mouth();
   display.display();
-  delay(1000);
+  delay(400);
   return 0;
 }
 int left_winkey_face(){
@@ -121,7 +130,7 @@ int left_winkey_face(){
   left_wink();
   small_mouth();
   display.display();
-  delay(1000);
+  delay(400);
   return 0;
 }
 int right_winkey_face(){
@@ -129,7 +138,7 @@ int right_winkey_face(){
   right_wink();
   small_mouth();
   display.display();
-  delay(1000);
+  delay(400);
   return 0;
 }
 int reg_face(){
@@ -137,7 +146,7 @@ int reg_face(){
   eyes();
   small_mouth();
   display.display();
-  delay(1000);
+  delay(400);
   return 0;
 }
 int side_eye_face(){
@@ -185,6 +194,17 @@ int wake_up(){
   reg_face();
   return 0;
 }
+int start_up(){
+  player.playMp3Folder(1);
+  blink_face();
+  left_winkey_face();
+  blink_face();
+  right_winkey_face();
+  blink_face();
+  reg_face();
+  delay(1000);
+  return 0;
+}
 int blinking(){
   reg_face();
   blink_face();
@@ -208,17 +228,14 @@ int carrot_face_blinking(){
 }
 
 int welcome(){
+  player.playMp3Folder(2);
   display.clearDisplay();
   display.setTextSize(2);
   display.setTextColor(WHITE);
-  display.setCursor(25, 0);
-  display.println("Welcome");
-  display.setCursor(25, 20);
-  display.println("I am");
-  display.setCursor(25, 40);
-  display.println("Alpey");
+  display.setCursor(35, 20);
+  display.println("Pixel");
   display.display();
-  delay(1000);
+  delay(2500);
   return 0;  
 }
 int cute_msg(){
@@ -262,14 +279,30 @@ int randomize(){
 
 void setup() {
   display.begin(SSD1306_SWITCHCAPVCC, OLED_ADDRESS);
-  sleep();
-  wake_up();
+  pinMode(serial1, INPUT);
+  pinMode(serial2, OUTPUT);
+  /// Sound Set Up 
+  mySoftwareSerial.begin(9600);
+  Serial.begin(115200);
+  Serial.println("Initializing DFPlayer ...");
+  player.begin(mySoftwareSerial);
+
+  player.volume(20);  //Set volume value. From 0 to 30
+
+  /// Display Set Up 
+  start_up();
   welcome();
 }
 
 void loop() {
-  carrot_face_blinking();
   heart_face();
-  give_side_eyes();
-  blinking();
+  player.playMp3Folder(6);
+  static unsigned long timer = millis();
+  timer=0;
+  while(timer<100000) {
+    timer = millis();
+    carrot_face_blinking();
+    give_side_eyes();
+    blinking();
+  }
 }
